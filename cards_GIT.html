@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kartyak</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX"
+      crossorigin="anonymous" />
+
+    <style>
+      /* Fő keret / Container */
+      .card_container {
+        max-width: 700px;
+        margin: 30px auto 0 auto;
+        padding: 0 20px;
+      }
+
+      /* 3 módszer befoglalói doboz) */
+      .section_box {
+        background-color: #ffffff;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 24px;
+        margin-bottom: 24px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        text-align: center;
+      }
+
+      .section_title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #374151;
+        margin-bottom: 16px;
+      }
+
+      /* --- 1. MÓDSZER: Hagyományos CSS gomb és kártya --- */
+      .custom_btn {
+        background-color: #2563eb;
+        color: white;
+        font-weight: 500;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .custom_btn:hover {
+        background-color: #1d4ed8;
+      }
+
+      .custom_card {
+        max-width: 400px;
+        margin: 0 auto;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        background-color: #f9fafb;
+        text-align: left;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+
+      .custom_card-img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+
+      .custom_card-body {
+        padding: 16px;
+      }
+
+      .custom_card-title {
+        font-weight: bold;
+        color: #111827;
+        margin-bottom: 4px;
+      }
+
+      .custom_card-text {
+        color: #4b5563;
+      }
+    </style>
+  </head>
+
+  <!-- https://getbootstrap.com/docs/5.3/utilities/background/ -->
+  <body class="bg-warning-subtle">
+    <!-- https://getbootstrap.com/docs/5.3/components/navbar/ -->
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-warning" href="./bootstap.html">Vissza a főoldalra</a>
+      </div>
+    </nav>
+
+    <!-- Fő tartalom tiszta CSS keretben -->
+    <div class="card_container">
+      <!-- h1 Bootstrappal -->
+      <div class="text-center">
+        <h1 class="display-5 text-dark fw-bold">CSS vs Bootstrap vs Tailwind</h1>
+      </div>
+
+      <!-- 1. PÉLDA: HAGYOMÁNYOS CSS + HTML  -->
+      <div class="section_box">
+        <h2 class="section_title">1. Hagyományos CSS + HTML</h2>
+
+        <div style="margin-bottom: 16px">
+          <button class="custom_btn">Mentés</button>
+        </div>
+
+        <div class="custom_card">
+          <img src="/assets/Boostrap/kep1.jpg" class="custom_card-img" alt="1. kép" />
+          <div class="custom_card-body">
+            <h5 class="custom_card-title">Hagyományos Kártya</h5>
+            <p class="custom_card-text">Minden tiszta CSS-sel van megírva.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. PÉLDA: BOOTSTRAP  -->
+      <div class="section_box">
+        <h2 class="section_title">2. Bootstrap (kész komponensek)</h2>
+      </div>
+
+      <div style="margin-bottom: 16px"></div>
+
+      <!-- 3. PÉLDA: TAILWIND  -->
+      <div class="section_box">
+        <h2 class="section_title">3. Tailwind CSS (segédosztályok)</h2>
+
+        <div style="margin-bottom: 16px"></div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
